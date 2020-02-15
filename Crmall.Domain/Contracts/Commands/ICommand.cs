@@ -1,7 +1,8 @@
-﻿using System;
+﻿using Flunt.Validations;
+
 namespace Crmall.Domain.Contracts.Commands
 {
-    public interface ICommand
+    public interface ICommand : IValidatable
     {
     }
 }

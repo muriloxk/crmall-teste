@@ -1,10 +1,94 @@
 ﻿using System;
+using Crmall.Domain.Commands;
+using Crmall.Domain.Entities;
+using Xunit;
+
 namespace Crmall.Tests.CommandTest
 {
     public class AtualizarClienteCommandTest
     {
-        public AtualizarClienteCommandTest()
+        [Fact]
+        public void Dado_Um_Comando_Com_Nome_Vazio_Invalido_Valid_Deve_Retornar_False()
         {
+            //Arrange
+            var command = new AtualizarClienteCommand(Guid.NewGuid(), "", DateTime.Now, ESexo.Feminino);
+
+            //Act
+            command.Validate();
+
+            Assert.False(command.Valid);
+        }
+
+        [Fact]
+        public void Dado_Um_Comando_Com_ID_Vazio_Invalido_Valid_Deve_Retornar_False()
+        {
+            //Arrange
+            var command = new AtualizarClienteCommand(Guid.Empty, "Murilo Sanches", DateTime.Now, ESexo.Feminino);
+
+            //Act
+            command.Validate();
+
+            Assert.False(command.Valid);
+        }
+
+
+        [Fact]
+        public void Dado_Um_Comando_Com_Data_Invalida_Deve_Retornar_Invalid_True()
+        {
+            //Arrange
+            var command = new AtualizarClienteCommand(Guid.NewGuid(), "Murilo Sanches", DateTime.Now.AddYears(-200), ESexo.Feminino);
+
+            //Act
+            command.Validate();
+
+            Assert.True(command.Invalid);
+        }
+
+
+        [Fact]
+        public void Dado_Um_Comando_Com_Cep_Preenchido_Com_Formato_Invalido_Deve_Retornar_Invalid_True()
+        {
+            //Arrange
+            var command = new AtualizarClienteCommand(Guid.NewGuid(), "Murilo Sanches", DateTime.Now, ESexo.Feminino, "87055-80");
+
+            //Act
+            command.Validate();
+
+
+            Assert.True(command.Invalid);
+        }
+
+        [Fact]
+        public void Dado_Um_Comando_Com_Cep_Preenchido_Deve_Validar_Se_Os_Demais_Dados_Do_Endereco_Estao_Preenchidos()
+        {
+            //Arrange
+            var command = new AtualizarClienteCommand(Guid.NewGuid(), "Murilo Sanches", DateTime.Now, ESexo.Feminino, "87055-280");
+
+            //Act
+            command.Validate();
+
+
+            Assert.True(command.Invalid);
+        }
+
+        [Fact]
+        public void Dado_Um_Comando_Com_Endereco_Preenchido_Corretamente_Deve_Retornar_Valid_Deve_Retornar_True()
+        {
+            //Arrange
+            var command = new AtualizarClienteCommand(Guid.NewGuid(),
+                                                      "Murilo Sanches",
+                                                      DateTime.Now,
+                                                      ESexo.Feminino,
+                                                      "87055-280",
+                                                      "Rua Pioneiro José Raimundo de Olveira",
+                                                      "128",
+                                                      null,
+                                                      "São Silvestre",
+                                                      "Maringá");
+            //Act
+            command.Validate();
+
+            Assert.True(command.Valid);
         }
     }
 }

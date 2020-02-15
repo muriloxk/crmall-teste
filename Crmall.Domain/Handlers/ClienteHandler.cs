@@ -14,12 +14,11 @@ namespace Crmall.Domain.Contracts.Handler
         private readonly IClienteRepository _repository;
         private readonly IUnitOfWork _unitOfWork;
 
-
         public ClienteHandler(IClienteRepository repository, IUnitOfWork unitOfWork)
         {
             _repository = repository;
+            _unitOfWork = unitOfWork;
         }
-
 
         public ICommandResult Executar(NovoClienteCommand comando)
         {
@@ -34,7 +33,6 @@ namespace Crmall.Domain.Contracts.Handler
 
             return new ResultadoGenerico(true, "Cliente salvo com sucesso", cliente);
         }
-
 
         public ICommandResult Executar(AtualizarClienteCommand comando)
         {
@@ -53,7 +51,6 @@ namespace Crmall.Domain.Contracts.Handler
             return new ResultadoGenerico(true, "Cliente atualizado com sucesso", cliente);
         }
 
-
         public ICommandResult Executar(RemoverClienteCommand comando)
         {
             comando.Validate();
@@ -66,12 +63,10 @@ namespace Crmall.Domain.Contracts.Handler
             return new ResultadoGenerico(true, "Cliente excluido com sucesso", comando.Id);
         }
 
-
         private bool ValidarSeClienteJaEstaCadastradoNoBanco(Guid id)
         {
             return _repository.BuscarPorId(id) != null;
         }
-
 
         private Cliente ConverterAtualizarClienteCommandParaCliente(AtualizarClienteCommand comando)
         {
@@ -86,7 +81,6 @@ namespace Crmall.Domain.Contracts.Handler
                                             comando.Bairro,
                                             comando.Cidade));
         }
-
 
         private  Cliente ConverterNovoClienteCommandParaCliente(NovoClienteCommand comando)
         {

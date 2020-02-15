@@ -1,5 +1,4 @@
-﻿using System;
-namespace Crmall.Domain.Contracts.Commands
+﻿namespace Crmall.Domain.Contracts.Commands
 {
     public interface ICommandResult
     {

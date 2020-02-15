@@ -4,4 +4,21 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+    <Compile Remove="Commands\ResultadoGenericoCommand.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Commands\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Handlers\" />
+    <Folder Include="Contracts\" />
+    <Folder Include="Contracts\Repository\" />
+    <Folder Include="Entities\ObjectValues\" />
+    <Folder Include="Contracts\Commands\" />
+    <Folder Include="Contracts\Handler\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Flunt" Version="1.0.4" />
+  </ItemGroup>
 </Project>

@@ -1,7 +1,7 @@
-﻿using System;
-namespace Crmall.Domain.Contracts.Repository
+﻿namespace Crmall.Domain.Contracts.Repository
 {
     public interface IUnitOfWork
     {
+        int Commit();
     }
 }

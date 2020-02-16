@@ -79,7 +79,8 @@ namespace Crmall.Domain.Contracts.Handler
                                             comando.Numero,
                                             comando.Complemento,
                                             comando.Bairro,
-                                            comando.Cidade));
+                                            comando.Cidade,
+                                            comando.Estado));
         }
 
         private  Cliente ConverterNovoClienteCommandParaCliente(NovoClienteCommand comando)
@@ -92,7 +93,8 @@ namespace Crmall.Domain.Contracts.Handler
                                             comando.Numero,
                                             comando.Complemento,
                                             comando.Bairro,
-                                            comando.Cidade));
+                                            comando.Cidade,
+                                            comando.Estado));
         }
     }
 }

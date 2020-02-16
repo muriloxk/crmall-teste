@@ -8,16 +8,6 @@ namespace Crmall.Domain.Commands
 {
     public class NovoClienteCommand : Notifiable, ICommand
     {
-        public string Nome { get; set; }
-        public DateTime DataNascimento { get; set; }
-        public ESexo Sexo { get; set; }
-        public string Cep { get; set; }
-        public string Logradouro { get; set; }
-        public string Numero { get; set; }
-        public string Complemento { get; set; }
-        public string Bairro { get; set; }
-        public string Cidade { get; set; }
-
         public NovoClienteCommand()
         {
 
@@ -31,7 +21,8 @@ namespace Crmall.Domain.Commands
                                   string numero = null,
                                   string complemento = null,
                                   string bairro = null,
-                                  string cidade = null)
+                                  string cidade = null,
+                                  string estado = null)
         {
             Nome = nome; 
             DataNascimento = dataNascimento; 
@@ -41,9 +32,21 @@ namespace Crmall.Domain.Commands
             Numero = numero;
             Complemento = complemento; 
             Bairro = bairro;  
-            Cidade = cidade; 
+            Cidade = cidade;
+            Estado = estado;
         }
-        
+
+        public string Nome { get; set; }
+        public DateTime DataNascimento { get; set; }
+        public ESexo Sexo { get; set; }
+        public string Cep { get; set; }
+        public string Logradouro { get; set; }
+        public string Numero { get; set; }
+        public string Complemento { get; set; }
+        public string Bairro { get; set; }
+        public string Cidade { get; set; }
+        public string Estado { get; set; }
+
         public void Validate()
         {
             AddNotifications(new Contract()

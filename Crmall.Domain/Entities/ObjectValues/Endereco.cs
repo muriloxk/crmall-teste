@@ -7,7 +7,8 @@
                         string numero,
                         string complemento,
                         string bairro,
-                        string cidade)
+                        string cidade,
+                        string estado)
         {
             Cep = cep;
             Logradouro = logradouro;
@@ -15,6 +16,7 @@
             Complemento = complemento;
             Bairro = bairro;
             Cidade = cidade;
+            Estado = estado;
         }
 
         public string Cep { get; private set; }
@@ -23,5 +25,6 @@
         public string Complemento { get; private set; }
         public string Bairro { get; private set; }
         public string Cidade { get; private set; }
+        public string Estado { get; private set; }
     }
 }

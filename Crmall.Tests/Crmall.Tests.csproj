@@ -17,6 +17,7 @@
   <ItemGroup>
     <Folder Include="CommandTest\" />
     <Folder Include="HandlerTest\" />
+    <Folder Include="QueriesTest\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Crmall.Domain\Crmall.Domain.csproj" />

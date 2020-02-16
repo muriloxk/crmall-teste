@@ -20,7 +20,8 @@ namespace Crmall.Domain.Commands
                                   string numero = null,
                                   string complemento = null,
                                   string bairro = null,
-                                  string cidade = null)
+                                  string cidade = null,
+                                  string estado = null)
         {
             Id = id;
             Nome = nome;
@@ -32,6 +33,7 @@ namespace Crmall.Domain.Commands
             Complemento = complemento;
             Bairro = bairro;
             Cidade = cidade;
+            Estado = estado;
         }
 
         public Guid Id { get; set; }
@@ -44,6 +46,7 @@ namespace Crmall.Domain.Commands
         public string Complemento { get; set; }
         public string Bairro { get; set; }
         public string Cidade { get; set; }
+        public string Estado { get; set; }
 
         public void Validate()
         {

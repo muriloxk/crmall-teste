@@ -17,6 +17,7 @@
     <Folder Include="Entities\ObjectValues\" />
     <Folder Include="Contracts\Commands\" />
     <Folder Include="Contracts\Handler\" />
+    <Folder Include="Queries\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Flunt" Version="1.0.4" />

@@ -2,10 +2,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Crmall.Domain.Contracts.Handler;
+using Crmall.Domain.Contracts.Repository;
+using Crmall.Infra;
+using Crmall.Infra.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -26,6 +31,13 @@ namespace Crmall.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            //TODO: Colocar para trabalhar com o mysql
+            services.AddDbContext<ClienteDataContext>(opt => opt.UseInMemoryDatabase("Crmall"));
+
+            services.AddTransient<IClienteRepository, ClienteRepository>();
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
+            services.AddTransient<ClienteHandler, ClienteHandler>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,6 +51,10 @@ namespace Crmall.Api
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(x => x.AllowAnyOrigin()
+                              .AllowAnyMethod()
+                              .AllowAnyHeader());
 
             app.UseAuthorization();
 

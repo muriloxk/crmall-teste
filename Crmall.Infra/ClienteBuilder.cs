@@ -27,37 +27,44 @@ namespace Crmall.Infra
                               .IsRequired()
                               .HasColumnType("VARCHAR(10)");
 
-            modelBuilder.Entity<Cliente>().Property(x => x.Endereco.Cep)
+            modelBuilder.Entity<Cliente>().OwnsOne(x => x.Endereco)
+                                          .Property(x => x.Cep)
                                           .HasColumnName("Cep")
                                           .IsRequired()
                                           .HasColumnType("VARCHAR(10)");
 
-            modelBuilder.Entity<Cliente>().Property(x => x.Endereco.Logradouro)
+            modelBuilder.Entity<Cliente>().OwnsOne(x => x.Endereco)
+                                          .Property(x => x.Logradouro)
                                           .HasColumnName("Logradouro")
                                           .IsRequired()
                                           .HasColumnType("VARCHAR(80)");
 
-            modelBuilder.Entity<Cliente>().Property(x => x.Endereco.Numero)
+            modelBuilder.Entity<Cliente>().OwnsOne(x => x.Endereco)  
+                                          .Property(x => x.Numero)
                                           .HasColumnName("Numero")
                                           .IsRequired()
                                           .HasColumnType("VARCHAR(10)");
 
-            modelBuilder.Entity<Cliente>().Property(x => x.Endereco.Complemento)
+            modelBuilder.Entity<Cliente>().OwnsOne(x => x.Endereco)
+                                          .Property(x => x.Complemento)
                                           .HasColumnName("Complemento")
                                           .IsRequired()
                                           .HasColumnType("VARCHAR(150)");
 
-            modelBuilder.Entity<Cliente>().Property(x => x.Endereco.Bairro)
+            modelBuilder.Entity<Cliente>().OwnsOne(x => x.Endereco)
+                                          .Property(x => x.Bairro)
                                           .HasColumnName("Complemento")
                                           .IsRequired()
                                           .HasColumnType("VARCHAR(80)");
 
-            modelBuilder.Entity<Cliente>().Property(x => x.Endereco.Estado)
+            modelBuilder.Entity<Cliente>().OwnsOne(x => x.Endereco)
+                                          .Property(x => x.Estado)
                                           .HasColumnName("Estado")
                                           .IsRequired()
                                           .HasColumnType("VARCHAR(45)");
 
-            modelBuilder.Entity<Cliente>().Property(x => x.Endereco.Cidade)
+            modelBuilder.Entity<Cliente>().OwnsOne(x => x.Endereco)
+                                          .Property(x => x.Cidade)
                                           .HasColumnName("Cidade")
                                           .IsRequired()
                                           .HasColumnType("VARCHAR(45)");

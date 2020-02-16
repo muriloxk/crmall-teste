@@ -10,6 +10,8 @@ namespace Crmall.Domain.Entities
         public ESexo Sexo { get; private set; }
         public Endereco Endereco { get; private set; }
 
+        public Cliente() { }
+
         public Cliente(string nome,
                        DateTime dataNascimento,
                        ESexo sexo,

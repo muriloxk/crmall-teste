@@ -8,4 +8,12 @@
   <ItemGroup>
     <Folder Include="Controllers\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Crmall.Domain\Crmall.Domain.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+    <ProjectReference Include="..\Crmall.Infra\Crmall.Infra.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

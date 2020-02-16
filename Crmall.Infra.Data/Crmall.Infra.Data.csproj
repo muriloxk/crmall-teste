@@ -21,9 +21,9 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational.Design" Version="1.1.6" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Crmall.Domain\Crmall.Domain.csproj" />
+    <Folder Include="Repositories\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Repositories\" />
+    <ProjectReference Include="..\Crmall.Domain\Crmall.Domain.csproj" />
   </ItemGroup>
 </Project>

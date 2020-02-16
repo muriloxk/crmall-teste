@@ -18,8 +18,11 @@
     <Folder Include="CommandTest\" />
     <Folder Include="HandlerTest\" />
     <Folder Include="QueriesTest\" />
+    <Folder Include="ViaCep\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Crmall.Infra.ViaCep\Crmall.Infra.ViaCep.csproj" />
+    <ProjectReference Include="..\Crmall.Infra.Data\Crmall.Infra.Data.csproj" />
     <ProjectReference Include="..\Crmall.Domain\Crmall.Domain.csproj" />
   </ItemGroup>
 </Project>

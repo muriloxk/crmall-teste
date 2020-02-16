@@ -2,6 +2,7 @@ using Crmall.Domain.Contracts.Handler;
 using Crmall.Domain.Contracts.Repository;
 using Crmall.Infra.Data;
 using Crmall.Infra.Data.Repositories;
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;

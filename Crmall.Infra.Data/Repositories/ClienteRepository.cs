@@ -37,6 +37,10 @@ namespace Crmall.Infra.Data.Repositories
         public void Excluir(Guid id)
         {
             var cliente = BuscarPorId(id);
+
+            if (cliente == null)
+                return;
+
             _context.Remove(cliente);
         }
 

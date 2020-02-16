@@ -14,10 +14,10 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.1" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Crmall.Infra\Crmall.Infra.Data.csproj">
+    <ProjectReference Include="..\Crmall.Domain\Crmall.Domain.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
-    <ProjectReference Include="..\Crmall.Domain\Crmall.Domain.csproj">
+    <ProjectReference Include="..\Crmall.Infra.Data\Crmall.Infra.Data.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>

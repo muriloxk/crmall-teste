@@ -1,5 +1,4 @@
-﻿using System;
-using Crmall.Domain.Entities;
+﻿using Crmall.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Crmall.Infra.Data

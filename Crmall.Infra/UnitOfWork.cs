@@ -1,7 +1,7 @@
 ﻿using System;
 using Crmall.Domain.Contracts.Repository;
 
-namespace Crmall.Infra
+namespace Crmall.Infra.Data
 {
     public class UnitOfWork : IUnitOfWork
     {

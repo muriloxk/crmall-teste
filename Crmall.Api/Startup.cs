@@ -1,20 +1,16 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Crmall.Domain.Contracts.Handler;
 using Crmall.Domain.Contracts.Repository;
-using Crmall.Infra;
-using Crmall.Infra.Repositories;
+using Crmall.Infra.Data;
+using Crmall.Infra.Data.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using Pomelo.EntityFrameworkCore.MySql.Storage;
+using System;
 
 namespace Crmall.Api
 {
@@ -32,8 +28,8 @@ namespace Crmall.Api
         {
             services.AddControllers();
 
-            //TODO: Colocar para trabalhar com o mysql
-            services.AddDbContext<ClienteDataContext>(opt => opt.UseInMemoryDatabase("Crmall"));
+            //services.AddDbContext<ClienteDataContext>(opt => opt.UseInMemoryDatabase("Crmall"));
+            services.AddDbContext<ClienteDataContext>(opt => opt.UseMySql("server=127.0.0.1;database=Crmall;user=root;password=qwer1234#"));
 
             services.AddTransient<IClienteRepository, ClienteRepository>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();

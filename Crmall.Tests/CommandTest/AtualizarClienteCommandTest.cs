@@ -36,7 +36,7 @@ namespace Crmall.Tests.CommandTest
         public void Dado_Um_Comando_Com_Data_Invalida_Deve_Retornar_Invalid_True()
         {
             //Arrange
-            var command = new AtualizarClienteCommand(Guid.NewGuid(), "Murilo Sanches", DateTime.Now.AddYears(-200), ESexo.Feminino);
+            var command = new AtualizarClienteCommand(Guid.NewGuid(), "Murilo Sanches", DateTime.Now.AddYears(-200), ESexo.Masculino);
 
             //Act
             command.Validate();
@@ -44,12 +44,25 @@ namespace Crmall.Tests.CommandTest
             Assert.True(command.Invalid);
         }
 
+        [Fact]
+        public void Dado_Um_Comando_Com_Sexo_Incorreto_Deve_Retornar_Valid_False()
+        {
+            //Arrange
+            var command = new AtualizarClienteCommand(Guid.NewGuid(), "Murilo Sanches", DateTime.Now, (ESexo)3);
+
+            //Act
+            command.Validate();
+
+
+            Assert.False(command.Valid);
+        }
+
 
         [Fact]
         public void Dado_Um_Comando_Com_Cep_Preenchido_Com_Formato_Invalido_Deve_Retornar_Invalid_True()
         {
             //Arrange
-            var command = new AtualizarClienteCommand(Guid.NewGuid(), "Murilo Sanches", DateTime.Now, ESexo.Feminino, "87055-80");
+            var command = new AtualizarClienteCommand(Guid.NewGuid(), "Murilo Sanches", DateTime.Now, ESexo.Masculino, "87055-80");
 
             //Act
             command.Validate();
@@ -62,7 +75,7 @@ namespace Crmall.Tests.CommandTest
         public void Dado_Um_Comando_Com_Cep_Preenchido_Deve_Validar_Se_Os_Demais_Dados_Do_Endereco_Estao_Preenchidos()
         {
             //Arrange
-            var command = new AtualizarClienteCommand(Guid.NewGuid(), "Murilo Sanches", DateTime.Now, ESexo.Feminino, "87055-280");
+            var command = new AtualizarClienteCommand(Guid.NewGuid(), "Murilo Sanches", DateTime.Now, ESexo.Masculino, "87055-280");
 
             //Act
             command.Validate();
@@ -78,7 +91,7 @@ namespace Crmall.Tests.CommandTest
             var command = new AtualizarClienteCommand(Guid.NewGuid(),
                                                       "Murilo Sanches",
                                                       DateTime.Now,
-                                                      ESexo.Feminino,
+                                                      ESexo.Masculino,
                                                       "87055-280",
                                                       "Rua Pioneiro José Raimundo de Olveira",
                                                       "128",

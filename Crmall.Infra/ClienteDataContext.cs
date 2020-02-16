@@ -2,7 +2,7 @@
 using Crmall.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Crmall.Infra
+namespace Crmall.Infra.Data
 {
     public class ClienteDataContext : DbContext
     {

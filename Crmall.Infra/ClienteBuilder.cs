@@ -2,7 +2,7 @@
 using Crmall.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Crmall.Infra
+namespace Crmall.Infra.Data
 {
     public static class ClienteBuilder
     {
@@ -25,7 +25,7 @@ namespace Crmall.Infra
 
             modelBuilder.Entity<Cliente>().Property(x => x.Sexo)
                               .IsRequired()
-                              .HasColumnType("VARCHAR(10)");
+                              .HasColumnType("VARCHAR(45)");
 
             modelBuilder.Entity<Cliente>().OwnsOne(x => x.Endereco)
                                           .Property(x => x.Cep)
@@ -53,7 +53,7 @@ namespace Crmall.Infra
 
             modelBuilder.Entity<Cliente>().OwnsOne(x => x.Endereco)
                                           .Property(x => x.Bairro)
-                                          .HasColumnName("Complemento")
+                                          .HasColumnName("Bairro")
                                           .IsRequired()
                                           .HasColumnType("VARCHAR(80)");
 

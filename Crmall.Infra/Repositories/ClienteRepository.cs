@@ -6,7 +6,7 @@ using Crmall.Domain.Entities;
 using Crmall.Domain.Queries;
 using Microsoft.EntityFrameworkCore;
 
-namespace Crmall.Infra.Repositories
+namespace Crmall.Infra.Data.Repositories
 {
     public class ClienteRepository : IClienteRepository
     {

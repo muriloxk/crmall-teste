@@ -10,4 +10,10 @@
   <ItemGroup>
     <Folder Include="Entities\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Crmall.Domain\Crmall.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="RequestBuilder.cs" />
+  </ItemGroup>
 </Project>

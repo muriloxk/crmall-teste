@@ -20,5 +20,8 @@
     <ProjectReference Include="..\Crmall.Infra.Data\Crmall.Infra.Data.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+    <ProjectReference Include="..\Crmall.Infra.ViaCep\Crmall.Infra.ViaCep.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 </Project>

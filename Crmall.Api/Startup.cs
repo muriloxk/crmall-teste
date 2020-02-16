@@ -12,6 +12,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Pomelo.EntityFrameworkCore.MySql.Storage;
 using System;
+using RestSharp;
+using Crmall.Infra.ViaCep;
 
 namespace Crmall.Api
 {
@@ -35,6 +37,11 @@ namespace Crmall.Api
             services.AddTransient<IClienteRepository, ClienteRepository>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddTransient<ClienteHandler, ClienteHandler>();
+
+            //Infra.ViaCep
+            services.AddTransient<IRestClient, RestClient>();
+            services.AddTransient<IRestRequest, RestRequest>();
+            services.AddTransient<BuscadorDeCep, BuscadorDeCep>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

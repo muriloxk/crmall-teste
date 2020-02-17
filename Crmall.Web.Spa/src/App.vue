@@ -1,12 +1,6 @@
 <template>
   <div id="app">
-    <nav>
-        <ul>  
-            <li v-for="route in routes"  v-show="route.titulo">
-                <router-link :to="route.path ? route.path : '/'" >{{route.titulo}}</router-link >
-            </li>
-        </ul>
-    </nav>
+
 
     <router-view></router-view>
 

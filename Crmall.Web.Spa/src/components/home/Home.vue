@@ -21,6 +21,10 @@
   
     <span v-if="clientes.length == 0">Não possuimos nenhum cliente para listar</span>
 
+        <router-link :to="{ name: 'cadastro'}">
+            <button class="button-adicionar">Adicionar novo cliente</button>
+        </router-link>
+
   </div>
 </template>
 
@@ -80,6 +84,18 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+.button-adicionar {
+       display: block;
+       margin: auto;
+       padding: 10px;
+       border-radius: 1rem;
+       font-size: 1em;
+       margin-top:0.5rem;
+       background:SeaGreen;
+       color:white;
+       text-decoration:none;
 }
 
 .msg {

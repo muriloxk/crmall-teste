@@ -99,10 +99,10 @@ https://docs.microsoft.com/pt-br/azure/architecture/patterns/anti-corruption-lay
  <b>Banco:</b> <br>
  O arquivo do banco como foi pedido está em DataBaseSchema.sql
  O arquivo de configuração da conexão está hardcode no arquivo do projeto da api Startup.cs, caso queira tem a opção de banco em memória, basta trocar as linhas: 
- 
- //services.AddDbContext<ClienteDataContext>(opt => opt.UseInMemoryDatabase("Crmall"));
-services.AddDbContext<ClienteDataContext>(opt => opt.UseMySql("server=127.0.0.1;database=Crmall;user=root;password=qwer1234#"));
- 
+
+		 //services.AddDbContext<ClienteDataContext>(opt => opt.UseInMemoryDatabase("Crmall"));
+		services.AddDbContext<ClienteDataContext>(opt => 	opt.UseMySql("server=127.0.0.1;database=Crmall;user=root;password=qwer1234#"));
+
  <b>Spa</b>
  
  Você pode fazer o deploy acredito eu em qualquer servidor (Apache, node, IIS) de sua preferência, já deixei também uma pasta deploy, com os arquivos minificados. 

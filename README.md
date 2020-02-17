@@ -105,6 +105,23 @@ services.AddDbContext<ClienteDataContext>(opt => opt.UseMySql("server=127.0.0.1;
  
  <b>Spa</b>
  
+ Você pode fazer o deploy acredito eu em qualquer servidor (Apache, node, IIS) de sua preferência, já deixei também uma pasta deploy, com os arquivos minificados. 
+
+<i>Observação</i>: 
+- Recomendo o servidor local node, bem simples e utilizo ele aqui <a href="https://www.npmjs.com/package/http-server">http-server</a>, com um simples comando no terminal dentro do diretório, você está rodando o servidor:
+  		http-server path
+		
+- Caso seu servidor esteja rodando em uma porta diferente da configurada na SPA, o arquivo com a URI Base é o main.js
+
+	import VueResourse from 'vue-resource';
+	Vue.use(VueResourse);
+	Vue.http.options.root = 'https://localhost:5003'; <-- Sua URL aqui
+
+		
+		
+	
+	
+ 
  
  
  

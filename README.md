@@ -2,47 +2,76 @@
 
 Teste cadastro de clientes
 
-#Objetivo:
+# Objetivo:
 Desenvolver sistema para cadastro de clientes com as funcionalidades de listagem, adição/edição e remoção.              
    1ª tela: Listagem dos clientes cadastrados em grid, disponibilizar botões: Adicionar, editar e remover clientes.
    2ª tela: Tela para adicionar/editar clientes.
 
 
- #Resumo do projeto: 
+ # Resumo do projeto: 
 
  Observação: Eu sei que para um projeto simples de CRUD como esse um modelo de api data-driven era mais enxuto e barato, mas como é um teste resolvi utilizar conceitos mais avançados para afim de demonstração e compartilhar. 
  
- #API:
+ # API:
 
  Na api procurei utilizar:  
- 			
- 			Conceitos de OOP, SOLID e Clean Code 
+ 	
+<ul> 
+	<li>Conceitos de OOP, SOLID e Clean Code </li>
 
- 			Arquitetura em camadas tatica DDD para uma facil futura implementação de microserviços com contextos limitados e pattern como domain notification
+	<li>Arquitetura em camadas tatica DDD para uma facil futura implementação de microserviços com contextos limitados e pattern como domain notification
+	<ul>
 
- 				Referências: 
-					https://docs.microsoft.com/pt-br/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice
+		<li> Referências: </li> 
+			<li> https://docs.microsoft.com/pt-br/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice </li>
 
 
-				Domain notifications: 
-				  	https://martinfowler.com/eaaDev/Notification.html
-				  	https://martinfowler.com/articles/replaceThrowWithNotification.html
+			<li>  domain notification 
+			https://martinfowler.com/eaaDev/Notification.html
+			https://martinfowler.com/articles/replaceThrowWithNotification.html  </li>
 
- 			CQRS, Repository e UnitOfWork 
-				
-				Referências: 
- 					https://martinfowler.com/bliki/CQRS.html
+	</li>
 
- 					https://docs.microsoft.com/pt-br/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/cqrs-microservice-reads
+	<li> 
+		CQRS, Repository e UnitOfWork <br/>
+		Referências:
 
- 			Testes unitários e de integração utilizando xUnit e Moq
+		<ul> 
+			<li> https://martinfowler.com/bliki/CQRS.html </li>
 
- 			Padrão de Camada Anticorrupção com a api ViaCep
- 					
- 					https://docs.microsoft.com/pt-br/azure/architecture/patterns/anti-corruption-layer
+			<li> https://docs.microsoft.com/pt-br/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/cqrs-microservice-reads </li>
+		<ul>
+	</li>
 
-#SPA
- A camada de UI é uma SPA simples criada com Vue.js, até o ano passado eu estava trabalhando com angular.js, mas para o teste eu quis utilizar algum framework mais atual, não tive tempo de separar tudo em componente ou dar um clean code desejado, mas procurei utilizar rotas, componentes, eventos de pai para filho, filho para pai, services.
+	<li>
+		Testes unitários e de integração utilizando xUnit e Moq
+	</li>
+
+	<li> 
+		Padrão de Camada Anticorrupção com a api ViaCep <br/>
+		Referencias: 
+
+		<ul> 	
+			<li>https://docs.microsoft.com/pt-br/azure/architecture/patterns/anti-corruption-layer</li>
+		</ul>
+	</li>
+
+</ul>		
+
+
+
+# SPA
+ A camada de UI é uma SPA simples criada com Vue.js, até o ano passado eu estava trabalhando com angular.js, mas para o teste eu quis utilizar algum framework mais atual, não tive tempo de separar tudo em componente ou dar um clean code desejado, mas procurei utilizar o core de uma SPA
+
+<ul>
+	<li>Rotas</li>
+	<li>Componentes</li>
+	<li>Eventos de pai para filho</li>
+	<li>Eventos de filho para pai</li>
+	<li>Services</li>
+	<li>Diretiva</li>
+</ul>
+
 
 
 

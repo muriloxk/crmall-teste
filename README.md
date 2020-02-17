@@ -21,8 +21,8 @@ Desenvolver sistema para cadastro de clientes com as funcionalidades de listagem
 
 <li><b>Arquitetura em camadas tatica DDD para uma facil futura implementação de microserviços com contextos limitados e pattern como domain notification</b> <br>
 
-(https://raw.githubusercontent.com/muriloxk/crmall-teste/master/Onion%20Layers.png)
-	
+![GitHub Logo](/images/Onion%20Layers.png)
+
 <br> <br>
 
 <i>Referencias:</i> <br><br>

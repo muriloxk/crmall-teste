@@ -10,13 +10,13 @@
 
         <fieldset>
             <legend>Cliente:</legend>
-        <label for="nome"> Nome:</label> 
+        <label for="nome"> Nome</label> 
         <input type="text" id="nome" v-model="clienteSelecionado.nome" /><br />
 
-        <label for="nascimento">Data de nascimento</label>
-         <date-picker type="date" v-model="clienteSelecionado.dataNascimento" valueType="format"></date-picker> <br />
-
-
+        <div class="date-picker">
+            <label for="nascimento">Data de nascimento</label>
+            <date-picker type="date" v-model="clienteSelecionado.dataNascimento" valueType="format"></date-picker> <br />
+        </div>
 
             <input type="radio" 
                    id="masculino" 
@@ -220,6 +220,7 @@
         margin-bottom:1rem;
     }
 
+
     button {
          padding: 0.7rem;
          font-size: 1.2rem; 
@@ -232,12 +233,17 @@
         padding:0;
     }
 
+
+    .date-picker {
+           margin-top: 0.4rem;
+    }
+
     .button-cep{
         padding:0.5rem;
     }
 
     .formulario input[type="text"] {
-        padding: 0.4rem;
+        padding: 0.3rem;
         font-size:1.2rem;
         margin-top: 0.4rem;
     }

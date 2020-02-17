@@ -20,9 +20,9 @@ Desenvolver sistema para cadastro de clientes com as funcionalidades de listagem
 <li><b>Conceitos de OOP, SOLID e Clean Code</b> </li>
 
 <li>Arquitetura em camadas tatica DDD para uma facil futura implementação de microserviços com contextos limitados e pattern como domain notification
+<br> <br>
 
-
-<i>Referencias:</i> <br> <br>
+<i>Referencias:</i> 
 <a href="https://docs.microsoft.com/pt-br/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice">
 	https://docs.microsoft.com/pt-br/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice 
 </a> <br>
@@ -33,8 +33,8 @@ Domain notification <br>
 </li>
 
 <li> 
-<b>CQRS, Repository e UnitOfWork</b> <br/>
-<i>Referencias:</i><br> <br>
+<b>CQRS, Repository e UnitOfWork</b> <br> <br>
+<i>Referencias:</i>
 
  
 <a href="https://martinfowler.com/bliki/CQRS.html">https://martinfowler.com/bliki/CQRS.html</a> <br/>
@@ -48,9 +48,9 @@ Domain notification <br>
 </li>
 
 <li> 
-<b>Padrão de Camada Anticorrupção com a api ViaCep</b> <br/>
+<b>Padrão de Camada Anticorrupção com a api ViaCep</b> <br><br>
 <i>Referencias:</i>
-<br><br>
+
 <a href="https://docs.microsoft.com/pt-br/azure/architecture/patterns/anti-corruption-layer">
 https://docs.microsoft.com/pt-br/azure/architecture/patterns/anti-corruption-layer
 </a>

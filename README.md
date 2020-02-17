@@ -40,7 +40,7 @@ Domain notification <br>
 <li> 
 <b>CQRS, Repository e UnitOfWork</b> <br> <br>
 	
- ![GitHub Logo](/Onion%20Layers.png) <br>	
+ ![GitHub Logo](/cqrs.png) <br>	
 	
 <i>Referencias:</i>
 

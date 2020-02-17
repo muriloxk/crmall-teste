@@ -22,24 +22,24 @@ Desenvolver sistema para cadastro de clientes com as funcionalidades de listagem
 <li>Arquitetura em camadas tatica DDD para uma facil futura implementação de microserviços com contextos limitados e pattern como domain notification
 
 
-Referências: 
+Referências: <br>
 <a href="https://docs.microsoft.com/pt-br/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice">
 	https://docs.microsoft.com/pt-br/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice 
-</a>
-
-	Domain notification 
-	https://martinfowler.com/eaaDev/Notification.html
-	https://martinfowler.com/articles/replaceThrowWithNotification.html 
+</a> <br>
+<br>
+Domain notification <br> 
+<a href="https://martinfowler.com/eaaDev/Notification.html">https://martinfowler.com/eaaDev/Notification.html</a><br>
+<a href="https://martinfowler.com/articles/replaceThrowWithNotification.html">https://martinfowler.com/articles/replaceThrowWithNotification.html</a> <br>
 </li>
 
 <li> 
 CQRS, Repository e UnitOfWork <br/>
-Referências:
+Referências:<br/>
 
  
-	https://martinfowler.com/bliki/CQRS.html 
+<a href="https://martinfowler.com/bliki/CQRS.html">https://martinfowler.com/bliki/CQRS.html</a> <br/>
 
-	https://docs.microsoft.com/pt-br/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/cqrs-microservice-reads 
+<a href="https://docs.microsoft.com/pt-br/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/cqrs-microservice-reads">https://docs.microsoft.com/pt-br/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/cqrs-microservice-reads</a><br/>
 
 </li>
 
@@ -49,10 +49,10 @@ Testes unitários e de integração utilizando xUnit e Moq
 
 <li> 
 Padrão de Camada Anticorrupção com a api ViaCep <br/>
-Referencias: 
-
-	
-	https://docs.microsoft.com/pt-br/azure/architecture/patterns/anti-corruption-layer
+Referencias: <br>
+<a href="https://docs.microsoft.com/pt-br/azure/architecture/patterns/anti-corruption-layer">
+https://docs.microsoft.com/pt-br/azure/architecture/patterns/anti-corruption-layer
+</a>
 
 </li>
 

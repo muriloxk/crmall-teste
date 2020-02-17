@@ -23,30 +23,23 @@ Desenvolver sistema para cadastro de clientes com as funcionalidades de listagem
 
 
 Referências: 
-<ul>
 
+	https://docs.microsoft.com/pt-br/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice 
 
-
-	Referências: 
-		<li> https://docs.microsoft.com/pt-br/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice </li>
-
-
-		<li>  domain notification 
-		https://martinfowler.com/eaaDev/Notification.html
-		https://martinfowler.com/articles/replaceThrowWithNotification.html  </li>
-</ul>
-
+	Domain notification 
+	https://martinfowler.com/eaaDev/Notification.html
+	https://martinfowler.com/articles/replaceThrowWithNotification.html 
 </li>
 
 <li> 
 CQRS, Repository e UnitOfWork <br/>
 Referências:
 
-<ul> 
-	<li> https://martinfowler.com/bliki/CQRS.html </li>
+ 
+	https://martinfowler.com/bliki/CQRS.html 
 
-	<li> https://docs.microsoft.com/pt-br/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/cqrs-microservice-reads </li>
-<ul>
+	https://docs.microsoft.com/pt-br/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/cqrs-microservice-reads 
+
 </li>
 
 <li>
@@ -57,9 +50,9 @@ Testes unitários e de integração utilizando xUnit e Moq
 Padrão de Camada Anticorrupção com a api ViaCep <br/>
 Referencias: 
 
-<ul> 	
-	<li>https://docs.microsoft.com/pt-br/azure/architecture/patterns/anti-corruption-layer</li>
-</ul>
+	
+	https://docs.microsoft.com/pt-br/azure/architecture/patterns/anti-corruption-layer
+
 </li>
 
 </ul>		

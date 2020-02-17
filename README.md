@@ -22,7 +22,7 @@ Desenvolver sistema para cadastro de clientes com as funcionalidades de listagem
 <li>Arquitetura em camadas tatica DDD para uma facil futura implementação de microserviços com contextos limitados e pattern como domain notification
 <br> <br>
 
-<i>Referencias:</i> 
+<i>Referencias:</i> <br><br>
 <a href="https://docs.microsoft.com/pt-br/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice">
 	https://docs.microsoft.com/pt-br/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice 
 </a> <br>

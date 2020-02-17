@@ -17,7 +17,7 @@ Desenvolver sistema para cadastro de clientes com as funcionalidades de listagem
  Na api procurei utilizar:  
  	
 <ul> 
-<li>Conceitos de OOP, SOLID e Clean Code </li>
+<li><b>Conceitos de OOP, SOLID e Clean Code</b> </li>
 
 <li>Arquitetura em camadas tatica DDD para uma facil futura implementação de microserviços com contextos limitados e pattern como domain notification
 
@@ -33,8 +33,8 @@ Domain notification <br>
 </li>
 
 <li> 
-CQRS, Repository e UnitOfWork <br/>
-Referências:<br/>
+<b>CQRS, Repository e UnitOfWork</b> <br/>
+Referências:</b>
 
  
 <a href="https://martinfowler.com/bliki/CQRS.html">https://martinfowler.com/bliki/CQRS.html</a> <br/>
@@ -44,7 +44,7 @@ Referências:<br/>
 </li>
 
 <li>
-Testes unitários e de integração utilizando xUnit e Moq
+<b>Testes unitários e de integração utilizando xUnit e Moq</b>
 </li>
 
 <li> 

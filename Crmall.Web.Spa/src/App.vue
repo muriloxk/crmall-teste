@@ -19,7 +19,7 @@
   export default {
       data() {
         return {
-          routes
+          routes: routes.filter(route => route.menu == true),
         }
       }
   }
@@ -35,15 +35,7 @@
   color: #2c3e50;
 }
 
-.msg-api {
-  display:block;
-  width: 30%;
-  text-align:center;
-  margin: 0 auto;
-  margin-bottom:0.5rem;
-  padding:1em;
-  background-color:#CCCCCC;
-}
+
 
 .lista-clientes{
   display: inline-block;

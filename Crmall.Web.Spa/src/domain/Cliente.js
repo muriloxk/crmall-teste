@@ -1,10 +1,10 @@
 export default class Cliente {
     constructor()
     {
+        this.id = null;
         this.nome = null;
-        this.dataNascimento = null;
-        this.sexo = null;
-        this.dataFormatada = null;
+        this.dataNascimento = new Date();
+        this.sexo = 0;
         this.endereco = {
                 cep: null,
                 logradouro: null,

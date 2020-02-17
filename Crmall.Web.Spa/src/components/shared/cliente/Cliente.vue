@@ -4,7 +4,10 @@
         <td> {{ cliente.sexo }} </td> 
         <td> {{ new Date(cliente.dataNascimento) | dateFormat('DD/MM/YYYY')  }} </td>
         <td>
-            <button class="btn btn-alterar" @click="alterar(cliente)">Alterar</button>
+            <router-link :to="{ name: 'altera', params: {id: cliente.id} }">
+                <button class="btn btn-alterar">Alterar</button>
+            </router-link>
+
             <button class="btn btn-remover" @click="remover(cliente)">Remover</button>
         </td>
       </tr>
@@ -20,10 +23,6 @@
                     this.$emit('removerCliente'); 
                 }
             },
-
-            alterar(){
-                this.$emit('alterarCliente');
-            }
         }
     }
 </script>

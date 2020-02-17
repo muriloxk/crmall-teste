@@ -4,15 +4,19 @@
         <span v-show="respostaErro" class="msg msg-erro"> {{ respostaErro }} </span>
         <span v-show="validacoes.length > 0" v-for="validacao in validacoes" class="msg msg-erro"> {{ validacao }} </span>
 
+
+
         <form @submit.prevent="salvar(clienteSelecionado, $event)">
+
+        <fieldset>
+            <legend>Cliente:</legend>
         <label for="nome"> Nome:</label> 
         <input type="text" id="nome" v-model="clienteSelecionado.nome" /><br />
 
         <label for="nascimento">Data de nascimento</label>
          <date-picker type="date" v-model="clienteSelecionado.dataNascimento" valueType="format"></date-picker> <br />
 
-        <fieldset>
-            <legend>Sexo:</legend>
+
 
             <input type="radio" 
                    id="masculino" 
@@ -41,11 +45,11 @@
         </fieldset>
 
         <fieldset>
-          <legend>Endereço</legend>
+          <legend>Endereço do cliente:</legend>
 
           <label for="cep">Cep</label>
           <input type="text" id="cep" v-model="clienteSelecionado.endereco.cep" />
-          <button @click="buscarCep(clienteSelecionado.endereco.cep,  $event)">Buscar por CEP</button> 
+          <button @click="buscarCep(clienteSelecionado.endereco.cep,  $event)" class="button-cep">Preecher com o cep</button> 
           <br/>
              <span v-show="respostaCep" class="msg msg-erro"> {{ respostaCep }} </span>
 
@@ -212,6 +216,9 @@
 </script>
 
 <style scoped>
+    fieldset {
+        margin-bottom:1rem;
+    }
 
     button {
          padding: 0.7rem;
@@ -223,6 +230,10 @@
         width: 40%;
         margin:0 auto;
         padding:0;
+    }
+
+    .button-cep{
+        padding:0.5rem;
     }
 
     .formulario input[type="text"] {

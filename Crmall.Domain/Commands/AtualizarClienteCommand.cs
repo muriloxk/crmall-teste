@@ -54,12 +54,12 @@ namespace Crmall.Domain.Commands
                                  .Requires()
                                  .IsNotNull(Id, "ID", "O Id é obrigatório para atualizar o cliente")
                                  .AreNotEquals(Id, Guid.Empty, "ID", "O Id é obrigatório para atualizar o cliente")
-                                 .HasMinLen(Nome, 4, "Nome", "Por favor, preencha o nome do cliente")
+                                 .HasMinLen(Nome, 4, "Nome", "Por favor, preencha o nome do cliente, minimo 4 caracteres.")
                                  .IsNotNull(Sexo, "Sexo", "Por favor, preencha o sexo")
                                  .IsBetween((int)Sexo, 0, 2, "Sexo", "Por favor preencha o sexo corretamente. [0 = Masculino, 1 = Feminino, 2 = Outro]")
                                  .IsBetween(DataNascimento,
-                                            DateTime.Now.AddYears(-140),
-                                            DateTime.Now,
+                                            DateTime.Now.AddYears(-140).Date,
+                                             DateTime.Now.AddDays(1).Date,
                                             "Data de nascimento",
                                             "Por favor, preencha uma data de nascimento válida. (Não permitido mais de 140 anos ou datas futuras)")
                              );

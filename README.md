@@ -17,44 +17,50 @@ Desenvolver sistema para cadastro de clientes com as funcionalidades de listagem
  Na api procurei utilizar:  
  	
 <ul> 
-	<li>Conceitos de OOP, SOLID e Clean Code </li>
+<li>Conceitos de OOP, SOLID e Clean Code </li>
 
-	<li>Arquitetura em camadas tatica DDD para uma facil futura implementação de microserviços com contextos limitados e pattern como domain notification
-	<ul>
-
-		<li> Referências: </li> 
-			<li> https://docs.microsoft.com/pt-br/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice </li>
+<li>Arquitetura em camadas tatica DDD para uma facil futura implementação de microserviços com contextos limitados e pattern como domain notification
 
 
-			<li>  domain notification 
-			https://martinfowler.com/eaaDev/Notification.html
-			https://martinfowler.com/articles/replaceThrowWithNotification.html  </li>
+Referências: 
+<ul>
 
-	</li>
 
-	<li> 
-		CQRS, Repository e UnitOfWork <br/>
-		Referências:
 
-		<ul> 
-			<li> https://martinfowler.com/bliki/CQRS.html </li>
+	Referências: 
+		<li> https://docs.microsoft.com/pt-br/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/ddd-oriented-microservice </li>
 
-			<li> https://docs.microsoft.com/pt-br/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/cqrs-microservice-reads </li>
-		<ul>
-	</li>
 
-	<li>
-		Testes unitários e de integração utilizando xUnit e Moq
-	</li>
+		<li>  domain notification 
+		https://martinfowler.com/eaaDev/Notification.html
+		https://martinfowler.com/articles/replaceThrowWithNotification.html  </li>
+</ul>
 
-	<li> 
-		Padrão de Camada Anticorrupção com a api ViaCep <br/>
-		Referencias: 
+</li>
 
-		<ul> 	
-			<li>https://docs.microsoft.com/pt-br/azure/architecture/patterns/anti-corruption-layer</li>
-		</ul>
-	</li>
+<li> 
+CQRS, Repository e UnitOfWork <br/>
+Referências:
+
+<ul> 
+	<li> https://martinfowler.com/bliki/CQRS.html </li>
+
+	<li> https://docs.microsoft.com/pt-br/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/cqrs-microservice-reads </li>
+<ul>
+</li>
+
+<li>
+Testes unitários e de integração utilizando xUnit e Moq
+</li>
+
+<li> 
+Padrão de Camada Anticorrupção com a api ViaCep <br/>
+Referencias: 
+
+<ul> 	
+	<li>https://docs.microsoft.com/pt-br/azure/architecture/patterns/anti-corruption-layer</li>
+</ul>
+</li>
 
 </ul>		
 

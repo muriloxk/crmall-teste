@@ -18,11 +18,17 @@
       </cliente-componente>
     </table>
 
+
+    <form>
+
+    </form>
+
   </div>
 </template>
 
 <script>
 	import Cliente from './components/shared/cliente/Cliente.vue';
+  import ClienteService from './domain/ClienteService';
 
   export default {
     name: 'app',
@@ -33,6 +39,7 @@
 
     data () {
       return {
+        service: new ClienteService(this.$http),
         titulo: 'Cadastro de clientes',
         clientes: [],
         respostaApi: "",
@@ -42,18 +49,14 @@
 
     methods: {
         remover(cliente) {
-          this.$http.delete('https://localhost:5003/clientes', {body: cliente})
-                    .then(response => response.json())
+          this.service.remover(cliente)
                     .then((response) => {
-
                       console.log(response);
                       this.respostaApi = response.message;
                       this.visivel = true;
-                      
                       setTimeout(() => this.visivel = false, 5000);
-                      
-                      this.atualizarLista();
 
+                      this.removerClienteDaLista(cliente);
                     }, err => console.log(err));
         },
 
@@ -61,9 +64,13 @@
           alert("Estamos escutando o evento de alterar cliente");
         },
 
+        removerClienteDaLista(cliente) {
+          let indice = this.clientes.indexOf(cliente);
+          this.clientes.splice(indice, 1);
+        },
+
         atualizarLista() {
-            this.$http.get('https://localhost:5003/clientes/todos')
-                      .then(res => res.json())
+            this.service.carregarTodos()
                       .then(clientes => {
                             this.clientes = clientes 
                       }, err => console.log(err));  
@@ -77,8 +84,6 @@
 </script>
 
 <style>
-
-
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

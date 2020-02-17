@@ -35,6 +35,7 @@
         color:white;
         border-radius:1rem;
     }
+    
     .btn-remover {
         background-color:FireBrick;
     }

@@ -6,7 +6,7 @@ Vue.use(VueFilterDateFormat);
 
 import VueResourse from 'vue-resource';
 Vue.use(VueResourse);
-
+Vue.http.options.root = 'https://localhost:5003';
 
 new Vue({
   el: '#app',

@@ -82,11 +82,11 @@ https://docs.microsoft.com/pt-br/azure/architecture/patterns/anti-corruption-lay
 </ul>
 
 
-Tela 1:
+<b>Tela 1:</b>
 
  ![GitHub Logo](/tela1.png) <br>
  
-Tela 2 
+<b>Tela 2</b> 
 
  ![GitHub Logo](/tela2.png) <br>
  

@@ -4,15 +4,13 @@ Teste cadastro de clientes
 
 # Objetivo:
 Desenvolver sistema para cadastro de clientes com as funcionalidades de listagem, adição/edição e remoção.              
-   1ª tela: Listagem dos clientes cadastrados em grid, disponibilizar botões: Adicionar, editar e remover clientes.
-   2ª tela: Tela para adicionar/editar clientes.
+   1ª tela: Listagem dos clientes cadastrados em grid, disponibilizar botões: Adicionar, editar e remover clientes. <br>
+   2ª tela: Tela para adicionar/editar clientes. <br>
 
 
  # Resumo do projeto: 
  
-
-
- Observação: Eu sei que para um projeto simples de CRUD como esse um modelo de api data-driven era mais enxuto e barato, mas como é um teste resolvi utilizar conceitos mais avançados para afim de demonstração e compartilhar. 
+ Para um projeto simples de CRUD como esse um modelo de api data-driven era mais enxuto e barato, mas como é um teste, resolvi utilizar conceitos mais avançados para afim de demonstração e compartilhar. 
  
  # API:
 
@@ -113,9 +111,10 @@ https://docs.microsoft.com/pt-br/azure/architecture/patterns/anti-corruption-lay
 		
 - Caso seu servidor esteja rodando em uma porta diferente da configurada na SPA, o arquivo com a URI Base é o main.js
 
-	import VueResourse from 'vue-resource';
-	Vue.use(VueResourse);
-	Vue.http.options.root = 'https://localhost:5003'; <-- Sua URL aqui
+
+	import VueResourse from 'vue-resource'; <br>
+	Vue.use(VueResourse); <br>
+	Vue.http.options.root = 'https://localhost:5003'; <-- Sua URL aqui <br>
 
 		
 		
@@ -126,7 +125,7 @@ https://docs.microsoft.com/pt-br/azure/architecture/patterns/anti-corruption-lay
  
  
  
-
+<b>Qualquer duvida, entre em contato comigo: murilando@gmail.com</b>
 
 
 

@@ -20,8 +20,8 @@ Desenvolver sistema para cadastro de clientes com as funcionalidades de listagem
 <li><b>Conceitos de OOP, SOLID e Clean Code</b> </li>
 
 <li><b>Arquitetura em camadas tatica DDD para uma facil futura implementação de microserviços com contextos limitados e pattern como domain notification</b> <br>
-	
-	<img src="https://raw.githubusercontent.com/muriloxk/crmall-teste/master/Onion%20Layers.png" width="200px" />
+
+(https://raw.githubusercontent.com/muriloxk/crmall-teste/master/Onion%20Layers.png)
 	
 <br> <br>
 

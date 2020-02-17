@@ -91,6 +91,23 @@ https://docs.microsoft.com/pt-br/azure/architecture/patterns/anti-corruption-lay
  ![GitHub Logo](/tela2.png) <br>
  
  
+ # Get Started
+ 
+ <b>Api:</b> <br>
+ O projeto da api foi feito com bibliotecas de classe net standard 2.0 e net core 3.1
+ 
+ <b>Banco:</b> <br>
+ O arquivo do banco como foi pedido está em DataBaseSchema.sql
+ O arquivo de configuração da conexão está hardcode no arquivo do projeto da api Startup.cs, caso queira tem a opção de banco em memória, basta trocar as linhas: 
+ 
+ //services.AddDbContext<ClienteDataContext>(opt => opt.UseInMemoryDatabase("Crmall"));
+services.AddDbContext<ClienteDataContext>(opt => opt.UseMySql("server=127.0.0.1;database=Crmall;user=root;password=qwer1234#"));
+ 
+ <b>Spa</b>
+ 
+ 
+ 
+ 
  
 
 

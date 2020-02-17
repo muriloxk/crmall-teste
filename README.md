@@ -10,7 +10,7 @@ Desenvolver sistema para cadastro de clientes com as funcionalidades de listagem
 
  # Resumo do projeto: 
  
- ![GitHub Logo](/Onion%20Layers.png)
+
 
  Observação: Eu sei que para um projeto simples de CRUD como esse um modelo de api data-driven era mais enxuto e barato, mas como é um teste resolvi utilizar conceitos mais avançados para afim de demonstração e compartilhar. 
  
@@ -22,7 +22,7 @@ Desenvolver sistema para cadastro de clientes com as funcionalidades de listagem
 <li><b>Conceitos de OOP, SOLID e Clean Code</b> </li>
 
 <li><b>Arquitetura em camadas tatica DDD para uma facil futura implementação de microserviços com contextos limitados e pattern como domain notification</b> <br>
-
+ ![GitHub Logo](/Onion%20Layers.png)
 <br> <br>
 
 <i>Referencias:</i> <br><br>

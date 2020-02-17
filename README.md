@@ -19,7 +19,10 @@ Desenvolver sistema para cadastro de clientes com as funcionalidades de listagem
 <ul> 
 <li><b>Conceitos de OOP, SOLID e Clean Code</b> </li>
 
-<li>Arquitetura em camadas tatica DDD para uma facil futura implementação de microserviços com contextos limitados e pattern como domain notification
+<li><b>Arquitetura em camadas tatica DDD para uma facil futura implementação de microserviços com contextos limitados e pattern como domain notification</b> <br>
+	
+	<img src="https://raw.githubusercontent.com/muriloxk/crmall-teste/master/Onion%20Layers.png" width="200px" />
+	
 <br> <br>
 
 <i>Referencias:</i> <br><br>

@@ -23,8 +23,7 @@ Desenvolver sistema para cadastro de clientes com as funcionalidades de listagem
 
 <li><b>Arquitetura em camadas tatica DDD para uma facil futura implementação de microserviços com contextos limitados e pattern como domain notification</b> <br>
 
-![GitHub Logo](/Onion%20Layers.png)
-
+ ![GitHub Logo](/Onion%20Layers.png)
 
 <br> <br>
 
@@ -41,7 +40,7 @@ Domain notification <br>
 <li> 
 <b>CQRS, Repository e UnitOfWork</b> <br> <br>
 	
-![GitHub Logo](/cqrs.png) <br>	
+ ![GitHub Logo](/Onion%20Layers.png) <br>	
 	
 <i>Referencias:</i>
 
@@ -84,6 +83,8 @@ https://docs.microsoft.com/pt-br/azure/architecture/patterns/anti-corruption-lay
 
 
 
+
+ ![GitHub Logo](/tela1.png) <br>
 
 
 

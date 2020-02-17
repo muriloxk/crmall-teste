@@ -58,11 +58,7 @@ namespace Crmall.Domain.Commands
                                             DateTime.Now.AddYears(-140),
                                             DateTime.Now,
                                             "Data de nascimento",
-                                            "Por favor, preencha uma data de nascimento válida.")
-                                 .IfNotNull(Cep, contract => contract.Matchs(Cep, "^\\d{5}-\\d{3}$", "Cep", "Por favor, preencha um cep válido"))
-                                 .IfNotNull(Cep, contract => contract.HasMinLen(Numero, 2, "Numero", "Por favor, preencha o numero do endereço"))
-                                 .IfNotNull(Cep, contract => contract.HasMinLen(Cidade, 4, "Cidade", "Por favor, preencha a cidade"))
-                                 .IfNotNull(Cep, contract => contract.HasMinLen(Bairro, 4, "Bairro", "Por favor, preencha o bairro"))
+                                            "Por favor, preencha uma data de nascimento válida. (Não permitido mais de 140 anos ou datas futuras)")
                              );
         }
     }

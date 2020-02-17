@@ -1,7 +1,7 @@
 <template>
      <tr class="cliente-componente">
         <td> {{ cliente.nome }} </td>
-        <td> {{ cliente.sexo }} </td> 
+        <td v-sexo-enum> {{ cliente.sexo }}  </td> 
         <td> {{ new Date(cliente.dataNascimento) | dateFormat('DD/MM/YYYY')  }} </td>
         <td>
             <router-link :to="{ name: 'altera', params: {id: cliente.id} }">

@@ -16,6 +16,9 @@ const router = new VueRouter({
   routes: routes
 })
 
+
+import './directives/Sexo';
+
 new Vue({
   el: '#app',
   router: router,

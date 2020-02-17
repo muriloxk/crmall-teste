@@ -20,11 +20,13 @@ namespace Crmall.Infra.Data.Repositories
         public void Atualizar(Cliente cliente)
         {
             _context.Entry(cliente).State = EntityState.Modified;
+            _context.Entry(cliente.Endereco).State = EntityState.Modified;
         }
 
         public Cliente BuscarPorId(Guid id)
         {
-            return _context.Clientes.Where(ClienteQueries.BuscarPeloId(id))
+            return _context.Clientes
+                                    .Where(ClienteQueries.BuscarPeloId(id))
                                     .AsNoTracking()
                                     .SingleOrDefault();
         }

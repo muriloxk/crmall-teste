@@ -1,11 +1,5 @@
 <template>
     <div class="formulario">
-        <span v-show="respostaApi" class="msg msg-api"> {{ respostaApi }} </span>
-        <span v-show="respostaErro" class="msg msg-erro"> {{ respostaErro }} </span>
-        <span v-show="validacoes.length > 0" v-for="validacao in validacoes" class="msg msg-erro"> {{ validacao }} </span>
-
-
-
         <form @submit.prevent="salvar(clienteSelecionado, $event)">
 
         <fieldset>
@@ -46,31 +40,48 @@
 
         <fieldset>
           <legend>Endereço do cliente:</legend>
-
-          <label for="cep">Cep</label>
-          <input type="text" id="cep" v-model="clienteSelecionado.endereco.cep" />
-          <button @click="buscarCep(clienteSelecionado.endereco.cep,  $event)" class="button-cep">Preecher com o cep</button> 
-          <br/>
-             <span v-show="respostaCep" class="msg msg-erro"> {{ respostaCep }} </span>
-
-          <label for="logradouro">Logradouro</label> 
-          <input type="text" id="logradouro" v-model="clienteSelecionado.endereco.logradouro" /> <br/>
+          <div class="prop-form">
+            <label for="cep">Cep</label>
+            <input type="text" id="cep" v-model="clienteSelecionado.endereco.cep" />
+            <button @click="buscarCep(clienteSelecionado.endereco.cep,  $event)" class="button-cep">Preecher com o cep</button> 
+            <br/>
+                <span v-show="respostaCep" class="msg msg-erro"> {{ respostaCep }} </span>
+           </div>
+        
+          <div class="prop-form">
+            <label for="logradouro">Logradouro</label> 
+            <input type="text" id="logradouro" v-model="clienteSelecionado.endereco.logradouro" /> <br/>
+          </div>
           
-          <label for="numero">Numero</label> 
-          <input type="text" id="numero" v-model="clienteSelecionado.endereco.numero" /> <br/>
-
+          <div class="prop-form">
+            <label for="numero">Numero</label> 
+            <input type="text" id="numero" v-model="clienteSelecionado.endereco.numero" /> <br/>
+          </div>
+        
+         <div class="prop-form">
           <label for="complemento">Complemento</label> 
           <input type="text" id="complemento" v-model="clienteSelecionado.endereco.complemento" /> <br/>
+         </div>
 
+        <div class="prop-form">
           <label for="bairro">Bairro</label> 
           <input type="text" id="bairro" v-model="clienteSelecionado.endereco.bairro" /> <br/>
+        </div>
 
+        <div class="prop-form"> 
           <label for="cidade">Cidade</label> 
           <input type="text" id="cidade" v-model="clienteSelecionado.endereco.cidade" /> <br/>
+        </div>
 
+        <div class="prop-form">
           <label for="estado">Estado</label> 
           <input type="text" id="estado" v-model="clienteSelecionado.endereco.estado" /> <br/>
+        </div>
         </fieldset>
+
+        <span v-show="respostaApi" class="msg msg-api"> {{ respostaApi }} </span>
+        <span v-show="respostaErro" class="msg msg-erro"> {{ respostaErro }} </span>
+        <span v-show="validacoes.length > 0" v-for="validacao in validacoes" class="msg msg-erro"> {{ validacao }} </span>
 
         <button>Salvar</button>
         
@@ -78,6 +89,8 @@
             <button>Voltar</button>
         </router-link>
     </form>
+
+     
     </div>
 </template>
 
@@ -216,48 +229,54 @@
 </script>
 
 <style scoped>
+    body{
+        font-size:10px;
+    }
+
     fieldset {
         margin-bottom:1rem;
     }
 
 
     button {
-         padding: 0.7rem;
-         font-size: 1.2rem; 
+         padding: 0.5rem;
+         font-size: .8rem; 
     }
 
     .formulario {
         display:block;
-        width: 40%;
+        width: 60%;
         margin:0 auto;
         padding:0;
     }
 
 
     .date-picker {
-           margin-top: 0.4rem;
+        margin-top: 0.1rem;
     }
 
     .button-cep{
-        padding:0.5rem;
+        padding:0.2rem;
     }
 
     .formulario input[type="text"] {
         padding: 0.3rem;
-        font-size:1.2rem;
-        margin-top: 0.4rem;
+        font-size:.8rem;
+        margin-top: 0.1rem;
+
     }
 
     .formulario label {
-          padding: 0.4rem;
-          font-size:1.2rem;
+          padding: 0.2rem;
+          font-size:.8rem;
     }
     .msg {
-        padding:0.5rem;
+        padding:0.2rem;
         display: block;
         width: 90%;
         margin: 0 auto;
-        font-size: 1.2rem; 
+        margin-bottom: 0.1rem;
+        font-size: .8rem;
     }
 
     .msg-erro {
@@ -267,4 +286,11 @@
     .msg-api {
         background:#98FB98;
     }  
+
+    .prop-form {
+        display: flex;
+        flex-direction:column;
+        width:70%;
+        margin:0 auto;
+    }
 </style>

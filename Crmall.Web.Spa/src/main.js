@@ -17,6 +17,7 @@ const router = new VueRouter({
 })
 
 
+
 import './directives/Sexo';
 
 new Vue({

@@ -3,7 +3,7 @@ export default class Cliente {
     {
         this.id = null;
         this.nome = null;
-        this.dataNascimento = new Date();
+        this.dataNascimento = new Date().toJSON();
         this.sexo = 0;
         this.endereco = {
                 cep: null,

@@ -48,7 +48,7 @@
           this.service.remover(cliente)
                     .then((response) => {
                       this.respostaApi = response.message; 
-                      setTimeout(() => this.visivel = false, 5000);
+                      setTimeout(() => this.respostaApi = null, 5000);
                       this.removerClienteDaLista(cliente);
                     }, err => his.respostaErro = "Não foi possivel excluir o cliente");
         },
@@ -87,6 +87,7 @@
     display: block;
     width: 30%;
     margin: 0 auto;
+    margin-bottom:10px;
 }
 
 .msg-erro {

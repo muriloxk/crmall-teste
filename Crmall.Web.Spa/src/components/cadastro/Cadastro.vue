@@ -1,16 +1,12 @@
 <template>
-    <div>
+    <div class="formulario">
         <span v-show="respostaApi" class="msg msg-api"> {{ respostaApi }} </span>
-
         <span v-show="respostaErro" class="msg msg-erro"> {{ respostaErro }} </span>
         <span v-show="validacoes.length > 0" v-for="validacao in validacoes" class="msg msg-erro"> {{ validacao }} </span>
 
-
-  
-
-        <form @submit.prevent="salvar(clienteSelecionado)">
+        <form @submit.prevent="salvar(clienteSelecionado, $event)">
         <label for="nome"> Nome:</label> 
-        <input type="text" id="nome" v-model="clienteSelecionado.nome" /> <br />
+        <input type="text" id="nome" v-model="clienteSelecionado.nome" /><br />
 
         <label for="nascimento">Data de nascimento</label>
          <date-picker type="date" v-model="clienteSelecionado.dataNascimento" valueType="format"></date-picker> <br />
@@ -32,7 +28,7 @@
                    name="sexo" 
                    value="1"  
                    v-model="clienteSelecionado.sexo" 
-                   :checked="clienteSelecionado.sexo == 1" >
+                   :checked="clienteSelecionado.sexo == 1"  >
             <label for="feminino">Feminino</label> <br/>
 
             <input type="radio" 
@@ -40,7 +36,7 @@
                    name="sexo" 
                    value="2"  
                    v-model="clienteSelecionado.sexo"
-                   :checked="clienteSelecionado.sexo == 2" >
+                   :checked="clienteSelecionado.sexo == 2"  >
             <label for="outro">Outro</label> <br/>
         </fieldset>
 
@@ -88,6 +84,8 @@
     import Cliente from '../../domain/Cliente';
     import ClienteService from '../../domain/ClienteService';
 
+ 
+
     export default {
 
         components: {
@@ -107,7 +105,7 @@
         }, 
 
         methods: {
-            salvar(cliente) {
+            salvar(cliente, event) {
                     var clienteCommand = {
                             id: cliente.id,
                             nome: cliente.nome,
@@ -121,26 +119,31 @@
                             cidade: cliente.endereco.cidade,
                             estado: cliente.endereco.estado
                             };
-                    
+
+                    this.validarCamposObrigatorios(clienteCommand, event);
+
+                    if(this.validacoes.length > 0) {
+                        event.preventDefault();
+                        return;
+                    }
 
                     if(clienteCommand.id === null){
                         this.service.salvar(clienteCommand)
                                     .then((res) =>  {
                                         this.validarResposta(res);
-                                        setTimeout(() => this.visivel = false, 5000)
+                                       this.$router.push({path: '/'})
                                     }, err => this.respostaErro = "Houve um erro salvar o cliente");
                     }
                     else{
                         this.service.alterar(clienteCommand)
                                         .then((res) =>  {
                                             this.validarResposta(res);
-                                            setTimeout(() => this.visivel = false, 5000)
+                                            this.$router.push({path: '/'})
                                         }, err => this.respostaErro = "Houve um erro alterar o cliente");
                     }
                 },
 
                 buscarCep(cep, event) {
-
                     if (event) event.preventDefault()
 
                     this.$http.get(`cep/${cep}`)
@@ -155,22 +158,45 @@
                 },
 
                 validarResposta(res) {
+                        this.limparValidacoes();
+                        
                         if(res.sucesso){
-                            this.respostaErro = null;
-                            this.validacoes = [];
                             this.respostaApi = res.message;
                         }
                         else {
-                            this.respostaApi = null;
                             this.respostaErro = res.message;
-                            this.validacoes = [];
+                   
                             res.data.forEach((data) => this.validacoes.push(data.message));
                         }
-                }
+                },
 
+                validarCamposObrigatorios(clienteCommand, event) {
+                    this.limparValidacoes();
+
+                    if(clienteCommand.nome === null || clienteCommand.nome.length === 0)
+                        this.validacoes.push("Por favor, preencha o nome do cliente");
+
+                    if(clienteCommand.nome.length < 4)
+                          this.validacoes.push("Por favor, preencha o nome do cliente, minimo 4 caracteres.");
+            
+                    if(clienteCommand.dataNascimento === null)
+                        this.validacoes.push("O campo da data de nascimento é obrigatório");
+      
+                    if(clienteCommand.sexo === null)
+                        this.validacoes.push("O campo do sexo é obrigatório");
+                },
+
+                limparValidacoes() {
+                    this.validacoes = [];
+                    this.respostaApi = null;
+                    this.respostaErro = null;
+                }
             },
 
             created() {
+
+                
+
                 if(this.id) {
                     this.service.buscarPorId(this.id)
                                 .then(cliente => {
@@ -186,11 +212,35 @@
 </script>
 
 <style scoped>
+
+    button {
+         padding: 0.7rem;
+         font-size: 1.2rem; 
+    }
+
+    .formulario {
+        display:block;
+        width: 40%;
+        margin:0 auto;
+        padding:0;
+    }
+
+    .formulario input[type="text"] {
+        padding: 0.4rem;
+        font-size:1.2rem;
+        margin-top: 0.4rem;
+    }
+
+    .formulario label {
+          padding: 0.4rem;
+          font-size:1.2rem;
+    }
     .msg {
         padding:0.5rem;
         display: block;
-        width: 30%;
+        width: 90%;
         margin: 0 auto;
+        font-size: 1.2rem; 
     }
 
     .msg-erro {
